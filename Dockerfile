@@ -2,7 +2,7 @@ FROM huggla/tomcat-alpine
 
 USER root
 
-ENV REV_param_CATALINA_OPTS="-Xms128m-Xmx756M-XX:SoftRefLRUPolicyMSPerMB=36000" \
+ENV REV_param_CATALINA_OPTS="-Xms128m -Xmx756M -XX:SoftRefLRUPolicyMSPerMB=36000" \
     JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk"
 
 RUN apk add --no-cache --virtual .build-deps openjdk$JAVA_MAJOR \
